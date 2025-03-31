@@ -5,7 +5,7 @@ def constant_window(m,k):
     l = 0
     r = k - 1
     for i in range(l,r+1):
-        total_sum = sum(m[l:r+1])
+        total_sum = sum(m[l:r+1])  # can also be written as total_sum = sum(m[:k])
         maxsum = total_sum
     while(r < n-1):
         total_sum = total_sum - m[l]
