@@ -1,4 +1,5 @@
 #longest subarray with sum <= k, here k is given number
+#here we have to find the longest substring with sum <=k
 #Bruteforce method
 def longest_substring(m,k):
     n = len(m)
@@ -15,3 +16,4 @@ def longest_substring(m,k):
 m = [2,5,1,7,10]
 k = 14
 print(longest_substring(m,k))
+#3
