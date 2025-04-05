@@ -10,4 +10,4 @@ def two_sum(nums,target):
     return []
 nums = [1,3,4,5,6]
 target = 7
-print(two_sum(nums,target))
+print(two_sum(nums,target)) #(1,2)
