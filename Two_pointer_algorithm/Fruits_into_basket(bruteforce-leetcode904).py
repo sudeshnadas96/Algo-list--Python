@@ -40,7 +40,7 @@ def total_fruits(trees, k): #here k is the types of fruits
         empty_set = set()
         for j in range(i , n):
             empty_set.add(trees[j])
-            if len(empty_set) <= k: # checking the length of set 
+            if len(empty_set) <= k: # checking the length of set is less than or equal to number of fruits
                 maxlen = max(maxlen , j - i + 1)
             else:
                 break
