@@ -1,4 +1,5 @@
 #to find the length longest substring without repeatition of any character
+#Brute-Force Method
 def longest_substring(m):
     n = len(m)
     maxlen = 0
