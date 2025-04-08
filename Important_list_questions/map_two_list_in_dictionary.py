@@ -4,4 +4,4 @@ def map_list(keys , values):
     if len(keys) == len(values): #to check whether thr length of two list is same
         mapped_dict = dict(zip(keys, values)) # creating a dictionary using the dict method
     return mapped_dict
-print(map_list(["A" , "B", "C"] , [1, 2, 3]))
+print(map_list(["A" , "B", "C"] , [1, 2, 3])) # {"A": 1, "B":2, "C":3}
