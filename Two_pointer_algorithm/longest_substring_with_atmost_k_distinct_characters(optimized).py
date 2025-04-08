@@ -2,6 +2,7 @@
 
 For example:
 You are given ‘str’ = ‘abbbbbbc’ and ‘K’ = 2, then the substrings that can be formed are [‘abbbbbb’, ‘bbbbbbc’]. Hence the answer is 7."""
+# important question
 
 def distinct_character(s,k):
     n = len(s)
@@ -23,4 +24,4 @@ def distinct_character(s,k):
             maxlen = max(maxlen, r-l+1)
         r = r + 1
     return maxlen
-print(distinct_character("aaabbbc" , 2))
+print(distinct_character("aaabbbc" , 2)) #6
