@@ -26,7 +26,7 @@ Constraints:
 nums[i] is either 0 or 1.
 0 <= goal <= nums.length
 """
-def binary_subarray(m, goal):
+"""def binary_subarray(m, goal):
     n = len(m)
     l = 0
     r = 0
@@ -51,8 +51,26 @@ def binary_subarray(m, goal):
 
         r += 1
 
-    return count
+    return count"""
+def binary_subarray(m, goal):
+    def at_most(k):
+        if k < 0:
+            return 0
+        n = len(m)
+        l = 0
+        total = 0
+        count = 0
+        for r in range(n):
+            total += m[r]
+            while total > k:
+                total -= m[l]
+                l += 1
+            count += (r - l + 1)
+        return count
+
+    return at_most(goal) - at_most(goal - 1)
+
 
 print(binary_subarray([1,0,1,0,1] , 2))
-print(binary_subarray([0,0,0,0] , 0))
+print(binary_subarray([0,0,0,0,0] , 0))
 print(binary_subarray([1,0,0,1,1,0] , 2))
