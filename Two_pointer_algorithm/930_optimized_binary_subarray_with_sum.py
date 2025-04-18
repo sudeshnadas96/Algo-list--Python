@@ -53,24 +53,27 @@ nums[i] is either 0 or 1.
 
     return count"""
 def binary_subarray(m, goal):
-    def at_most(k):
+    def count_at_most(k):
         if k < 0:
             return 0
         n = len(m)
         l = 0
+        r = 0
         total = 0
         count = 0
-        for r in range(n):
+        while r < n:
             total += m[r]
             while total > k:
                 total -= m[l]
                 l += 1
             count += (r - l + 1)
+            r += 1
         return count
 
-    return at_most(goal) - at_most(goal - 1)
+    return count_at_most(goal) - count_at_most(goal - 1)
 
 
-print(binary_subarray([1,0,1,0,1] , 2))
-print(binary_subarray([0,0,0,0,0] , 0))
-print(binary_subarray([1,0,0,1,1,0] , 2))
+
+print(binary_subarray([1,0,1,0,1] , 2)) #4
+print(binary_subarray([0,0,0,0,0] , 0)) #15
+print(binary_subarray([1,0,0,1,1,0] , 2))#7
